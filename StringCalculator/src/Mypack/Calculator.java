@@ -1,15 +1,14 @@
 package Mypack;
 
-public class Calculator {
-	int sum=0;
-	
+public class Calculator {	
 	int Add(String input)
 	{
 		return getSum(input);
 	}
 
 	public int getSum(String input) {
-		String[] inputs=input.split(",");
+		int sum=0;
+		String[] inputs=input.split("\n");
 		for(String i:inputs)
 		{
 			sum=sum+Integer.parseInt(i);

@@ -18,12 +18,12 @@ public class Testing {
 	@Test
 	public void returnSumForTwoInputs()
 	{
-		assertEquals(7,calculator.Add("2,5"));
+		assertEquals(7,calculator.Add("2\n5"));
 	}
 	@Test
 	public void HandlingUnknownNumberOfInputs()
 	{
-		assertEquals(14,calculator.Add("2,5,7"));
+		assertEquals(14,calculator.Add("2\n5\n7"));
 	}
 
 }
