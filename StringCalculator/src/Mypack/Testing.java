@@ -30,5 +30,10 @@ public class Testing {
 	{
 		assertEquals(20,calculator.Add("2\n5,7\n6"));
 	}
+	@Test
+	public void UserSpecifiedDelimiter()
+	{
+		assertEquals(10,calculator.Add("//;\n2;3;5"));
+	}
 
 }
