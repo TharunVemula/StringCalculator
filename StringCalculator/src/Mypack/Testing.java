@@ -23,7 +23,12 @@ public class Testing {
 	@Test
 	public void HandlingUnknownNumberOfInputs()
 	{
-		assertEquals(14,calculator.Add("2\n5\n7"));
+		assertEquals(14,calculator.Add("2,5,7"));
+	}
+	@Test
+	public void CommaAndNewLineAsDelimiters()
+	{
+		assertEquals(20,calculator.Add("2\n5,7\n6"));
 	}
 
 }
