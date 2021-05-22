@@ -15,8 +15,16 @@ public class Calculator {
 
 	private String extraxtInput(String input) {
 		String[] contents=input.split("\n",2);
-		delimiter=contents[0].substring(2);
+		findDelimiter(contents);
 		return contents[1];
+	}
+
+	public void findDelimiter(String[] contents) {
+		delimiter=contents[0].substring(2);
+		if(delimiter.startsWith("["))
+		{
+			delimiter=delimiter.substring(1,delimiter.length()-1);
+		}
 	}
 
 	private int getSum(String input) throws Exception {

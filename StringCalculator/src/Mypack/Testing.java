@@ -52,4 +52,9 @@ public class Testing {
 	{
 		assertEquals(5,calculator.Add("1001,5"));
 	}
+	@Test
+	public void delimiterWithAnyLength() throws Exception
+	{
+		assertEquals(6,calculator.Add("//[;;;]\n1;;;2;;;3"));
+	}
 }
