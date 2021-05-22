@@ -57,4 +57,14 @@ public class Testing {
 	{
 		assertEquals(6,calculator.Add("//[;;;]\n1;;;2;;;3"));
 	}
+	@Test
+	public void allowMultipleDelimiter() throws Exception
+	{
+		assertEquals(10,calculator.Add("//[;][:][,]\n1;2:4,3"));
+	}
+	@Test
+	public void allowMultipleDelimiterWithAnyLength() throws Exception
+	{
+		assertEquals(10,calculator.Add("//[;;][:][,,]\n1;;2:4,,3"));
+	}
 }

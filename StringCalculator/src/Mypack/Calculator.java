@@ -23,8 +23,19 @@ public class Calculator {
 		delimiter=contents[0].substring(2);
 		if(delimiter.startsWith("["))
 		{
-			delimiter=delimiter.substring(1,delimiter.length()-1);
+			delimiter=multipleDelimiters();
 		}
+	}
+
+	public String multipleDelimiters() {
+		String temp_delimiter="";
+		String delimits[]=delimiter.substring(1,delimiter.length()-1)
+				.split("]\\[");
+		for(String k:delimits)
+		{
+			temp_delimiter+="|"+k;
+		}
+		return temp_delimiter.substring(1);
 	}
 
 	private int getSum(String input) throws Exception {
