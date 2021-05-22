@@ -47,4 +47,9 @@ public class Testing {
 		    );
 		 assertEquals("negatives not allowed,-1,-3", exception.getMessage());   
 	}
+	@Test
+	public void ignoreNumbersGreaterThan1000() throws Exception
+	{
+		assertEquals(5,calculator.Add("1001,5"));
+	}
 }

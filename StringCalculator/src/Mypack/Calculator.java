@@ -24,9 +24,16 @@ public class Calculator {
 		countNegativeNumbers(inputs);
 		for(String i:inputs)
 		{
-			sum=sum+stringToInt(i);
+			sum=sum+checkNumber(i);
 		}
 		return sum;
+	}
+
+	private int checkNumber(String i) {
+		if(stringToInt(i)>1000)
+			return 0;
+		else
+			return stringToInt(i);
 	}
 
 	private void countNegativeNumbers(String[] inputs) throws Exception {
